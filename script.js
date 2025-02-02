@@ -31,8 +31,9 @@ function showLoveMessage() {
     // Tăng chỉ số để hiển thị tin nhắn và ảnh tiếp theo
     currentIndex++;
 
-    // Nếu đã đến mục cuối cùng, quay lại mục đầu tiên
-    if (currentIndex >= messages.length) {
-        currentIndex = 0;
+     if (currentIndex >= messages.length) {
+        document.getElementById("message").innerText = "Cảm ơn em đã xem hết các hình ảnh và tin nhắn dễ thương!";
+        document.getElementById("loveImage").src = "";  // Xóa ảnh cuối cùng nếu cần
+        document.querySelector("button").style.display = "none"; // Ẩn nút sau khi đến ảnh cuối
     }
 }

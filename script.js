@@ -7,7 +7,7 @@ function showLoveMessage() {
         { message: "Quá dễ thương 😘", img: "https://raw.githubusercontent.com/hoangbeou/minhcute/main/cute.jfif" },
         { message: "Cute vcl 🥰", img: "https://raw.githubusercontent.com/hoangbeou/minhcute/main/dethuong.jfif" },
         { message: "Meme em bé nè 💫", img: "https://raw.githubusercontent.com/hoangbeou/minhcute/main/meme.jfif" },
-        { message: "Hết òi, Anh yêu vợ rất nhiều", img: "" }  // Mục này không có ảnh, để img là rỗng
+        { message: "Hết òi, Anh yêu vợ rất nhiều", img: "https://raw.githubusercontent.com/hoangbeou/minhcute/main/end.jfif" }  // Mục này không có ảnh, để img là rỗng
     ];
 
     // Cập nhật tin nhắn

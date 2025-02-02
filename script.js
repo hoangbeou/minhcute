@@ -1,18 +1,24 @@
+let currentIndex = 0; // Khai báo currentIndex để theo dõi thứ tự
+
 function showLoveMessage() {
     const messages = [
-        { message: "Anh yêu em nhiều lắm! 💖", img: "https://raw.githubusercontent.com/hoangbeou/minhbeo/main/minh1.jfif" },
-        { message: "Em là điều tuyệt vời nhất trong cuộc đời anh! 😘", img: "https://raw.githubusercontent.com/hoangbeou/minhbeo/main/minh2.jfif" },
-        { message: "Có em bên cạnh, ngày nào cũng là ngày hạnh phúc! 🌸", img: "https://raw.githubusercontent.com/hoangbeou/minhbeo/main/minh3.jfif" },
-        { message: "Anh nhớ em mỗi giây mỗi phút! 🥰", img: "https://raw.githubusercontent.com/hoangbeou/minhbeo/main/minh4.jfif" },
-        { message: "Em chính là ánh sáng trong cuộc đời anh! 💫", img: "https://raw.githubusercontent.com/hoangbeou/minhbeo/main/minh5.jfif" }
+        { message: "Em bé tức giận nè", img: "https://raw.githubusercontent.com/hoangbeou/minhcute/main/angry.jfif" },
+        { message: "Em bé đánh giá nè 🌸", img: "https://raw.githubusercontent.com/hoangbeou/minhcute/refs/danhgia.jfif" },
+        { message: "Quá dễ thương 😘", img: "https://raw.githubusercontent.com/hoangbeou/minhcute/main/cute.jfif" },
+        { message: "Cute vcl 🥰", img: "https://raw.githubusercontent.com/hoangbeou/minhcute/main/dethuong.jfif" },
+        { message: "Meme em bé nè 💫", img: "https://raw.githubusercontent.com/hoangbeou/minhcute/refs/meme.jfif" },
+        { message: "Hết òi, Anh yêu vợ rất nhiều", img: "" }  // Mục này không có ảnh, để img là rỗng
     ];
 
-    // Chọn một tin nhắn và ảnh ngẫu nhiên
-    const randomItem = messages[Math.floor(Math.random() * messages.length)];
+    // Cập nhật tin nhắn
+    document.getElementById("message").innerText = messages[currentIndex].message;
 
-    // Cập nhật tin nhắn và ảnh
-    document.getElementById("message").innerText = randomItem.message;
-    document.getElementById("loveImage").src = randomItem.img;
+    // Cập nhật ảnh nếu có
+    if (messages[currentIndex].img !== "") {
+        document.getElementById("loveImage").src = messages[currentIndex].img;
+    } else {
+        document.getElementById("loveImage").src = "";  // Nếu không có ảnh, xóa ảnh
+    }
 
     // Thêm hiệu ứng thay đổi nền
     document.body.classList.add('change-background');
@@ -21,4 +27,12 @@ function showLoveMessage() {
     setTimeout(() => {
         document.body.classList.remove('change-background');
     }, 1000);
+
+    // Tăng chỉ số để hiển thị tin nhắn và ảnh tiếp theo
+    currentIndex++;
+
+    // Nếu đã đến mục cuối cùng, quay lại mục đầu tiên
+    if (currentIndex >= messages.length) {
+        currentIndex = 0;
+    }
 }

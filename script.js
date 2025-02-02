@@ -3,10 +3,10 @@ let currentIndex = 0; // Khai báo currentIndex để theo dõi thứ tự
 function showLoveMessage() {
     const messages = [
         { message: "Em bé tức giận nè", img: "https://raw.githubusercontent.com/hoangbeou/minhcute/main/angry.jfif" },
-        { message: "Em bé đánh giá nè 🌸", img: "https://raw.githubusercontent.com/hoangbeou/minhcute/refs/danhgia.jfif" },
+        { message: "Em bé đánh giá nè 🌸", img: "https://raw.githubusercontent.com/hoangbeou/minhcute/main/danhgia.jfif" },
         { message: "Quá dễ thương 😘", img: "https://raw.githubusercontent.com/hoangbeou/minhcute/main/cute.jfif" },
         { message: "Cute vcl 🥰", img: "https://raw.githubusercontent.com/hoangbeou/minhcute/main/dethuong.jfif" },
-        { message: "Meme em bé nè 💫", img: "https://raw.githubusercontent.com/hoangbeou/minhcute/refs/meme.jfif" },
+        { message: "Meme em bé nè 💫", img: "https://raw.githubusercontent.com/hoangbeou/minhcute/main/meme.jfif" },
         { message: "Hết òi, Anh yêu vợ rất nhiều", img: "" }  // Mục này không có ảnh, để img là rỗng
     ];
 

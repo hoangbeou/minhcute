@@ -32,8 +32,8 @@ function showLoveMessage() {
     currentIndex++;
 
      if (currentIndex >= messages.length) {
-        document.getElementById("message").innerText = "Cảm ơn em đã xem hết các hình ảnh và tin nhắn dễ thương!";
-        document.getElementById("loveImage").src = "";  // Xóa ảnh cuối cùng nếu cần
+       
+
         document.querySelector("button").style.display = "none"; // Ẩn nút sau khi đến ảnh cuối
     }
 }
